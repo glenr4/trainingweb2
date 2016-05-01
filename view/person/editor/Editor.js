@@ -11,7 +11,7 @@
     controller: 'personeditor',
     viewModel: 'personeditor',
 
-    trackResetOnLoad: true,
+    trackResetOnLoad: true, // This stops the form being marked as dirty when the record is loaded
 
     defaultType: 'textfield',
     items: [
@@ -41,10 +41,10 @@
             }
         }
     ]
-    ,
-    listeners: {
-        change: 'onChange'
-    }
+    //,
+    //listeners: {
+    //    change: 'onChange'
+    //}
 
 });
 

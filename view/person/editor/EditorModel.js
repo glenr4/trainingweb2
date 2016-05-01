@@ -4,8 +4,9 @@
     alias: 'viewmodel.personeditor',
 
     data: {
-        record: null,
-        isDirty: false
+        record: null
+        //,
+        //isDirty: false
     }
 
     //,
@@ -16,6 +17,7 @@
     //    searchval: 'That'
     //},
         
+    // Filtering code
     //stores: {
     //    people: {
     //        source: 'personstore' // this is the id field from the store

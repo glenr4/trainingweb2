@@ -13,15 +13,9 @@
             var vmRecord = viewModel.get('record');
             console.log(vmRecord);
 
-            //viewModel.set('recordOld', vmRecord);
-            //var recordOld = viewModel.get('recordOld');
-            //console.log('recordOld:');
-            //console.log(recordOld);
-
-
             editorView[0].loadRecord(vmRecord);
             this.getView().getForm().reset();   // clear the dirty flag
-            //gives the same object as editorView[0]
+            //gives the same object as editorView[0] xxxx
         } else {
             console.log('editorView not valid');
         }
@@ -82,16 +76,16 @@
             
         //}
             
-            this.onBackToGrid();
+        this.onBackToGrid();
 
     }
-    ,
-    onChange: function () {
-        console.log("onChange executing");
-        var viewModel = this.getViewModel();
-        viewModel.set('isDirty', true);
-        console.log(viewModel.get('isDirty'));
-    }
+    //,
+    //onChange: function () {
+    //    console.log("onChange executing");
+    //    var viewModel = this.getViewModel();
+    //    viewModel.set('isDirty', true);
+    //    console.log(viewModel.get('isDirty'));
+    //}
 
 });
 
