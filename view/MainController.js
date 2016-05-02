@@ -26,12 +26,6 @@ Ext.define('TrainingWeb.view.MainController', {
         }
     },
     updateModelData: function (dataname, datavalue) {
-        /// <summary>
-        /// updates model data - from global event call
-        /// </summary>
-        /// <param name="dataname">name of the model data to update</param>
-        /// <param name="datavalue">value of the update</param>
-
         var model = this.getViewModel();
         model.set(dataname, datavalue);
     },

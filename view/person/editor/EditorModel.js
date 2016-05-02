@@ -5,17 +5,7 @@
 
     data: {
         record: null
-        //,
-        //isDirty: false
     }
-
-    //,
-    //requires: ['TrainingWeb.model.Person'],
-
-    //data: {
-    //    myTitle: 'Bound Title',
-    //    searchval: 'That'
-    //},
         
     // Filtering code
     //stores: {

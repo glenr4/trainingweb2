@@ -8,7 +8,7 @@
 Ext.define('TrainingWeb.view.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
-   // reference: 'maintab',
+
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
@@ -84,38 +84,31 @@ Ext.define('TrainingWeb.view.Main', {
         items: [{
             xtype: 'mainlist'
         }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
+        }, {
+            title: 'Users',
+            iconCls: 'fa-user',
+            bind: {
+                html: '{loremIpsum}'
+            }
+        }, {
+            title: 'Groups',
+            iconCls: 'fa-users',
+            bind: {
+                html: '{loremIpsum}'
+            }
+        }, {
+            title: 'Settings',
+            iconCls: 'fa-cog',
+            bind: {
+                html: '{loremIpsum}'
+            }
         }
-    }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
+        , {
+            title: 'Person Form',
+            items: [{
+                xtype: 'personview'
+            }]
         }
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }
-    , {
-        title: 'Person Form',
-        items: [{
-            xtype: 'personview'
-        }]
-    }
-    //,
-    // , {
-    //     title: 'Person Editor',
-    //     items: [{
-    //         xtype: 'personeditorview'
-    //     }]
-    // }
     ],
     listeners: {
         added: 'onAdded',

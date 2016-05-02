@@ -23,7 +23,8 @@
 
     bind: {
         // Option 2 bind via the view model
-        //          use this approach if we need a copy of the global store for this particular view i.e. if you need to filter the store (see the view model)
+        //          use this approach if we need a copy of the global store for this particular view 
+        //          i.e. if you need to filter the store (see the view model)
         store: '{people}',
         title: '{myTitle}'
     },

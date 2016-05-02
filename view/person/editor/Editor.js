@@ -11,7 +11,8 @@
     controller: 'personeditor',
     viewModel: 'personeditor',
 
-    trackResetOnLoad: true, // This stops the form being marked as dirty when the record is loaded
+    // Don't need this if binding to the data directly
+    //trackResetOnLoad: true, // This stops the form being marked as dirty when the record is loaded. 
 
     defaultType: 'textfield',
     items: [
@@ -45,10 +46,8 @@
                 click: 'onSave'
             }
         }
-    ]
-    ,
+    ],
     listeners: {
-        //        change: 'onChange'
         afterrender: 'onAfterRender',
         dirtychange: 'onDirtyChange'
     }
