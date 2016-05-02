@@ -38,5 +38,18 @@ Ext.define('TrainingWeb.view.MainController', {
 
     init: function () {
         console.log("MainController init");
+    },
+    onAdded: function () {
+        console.log('MainController: onAdded');
+    },
+    onRemoved: function () {
+        console.log('MainController: onRemoved');
+    },
+    onTabchange: function () {
+        console.log('MainController: onTabchange');
+    },
+    onAfterrender: function () {
+        console.log('MainController: onAfterrender');
     }
+
 });

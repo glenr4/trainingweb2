@@ -116,5 +116,11 @@ Ext.define('TrainingWeb.view.Main', {
     //         xtype: 'personeditorview'
     //     }]
     // }
-    ]
+    ],
+    listeners: {
+        added: 'onAdded',
+        removed: 'onRemoved',
+        tabchange: 'onTabchange',
+        afterrender: 'onAfterrender'
+    }
 });

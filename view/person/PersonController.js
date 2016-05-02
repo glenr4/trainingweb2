@@ -6,16 +6,16 @@
     alias: 'controller.person',
 
     init: function () {
-        console.log("init");
-        var store = Ext.data.StoreManager.lookup('personstore');
-        console.log(store);
+        console.log("PersonController init");
+        //var store = Ext.data.StoreManager.lookup('personstore');
+        //console.log(store);
 
         var viewModel = this.getViewModel(),
             viewData = viewModel.get('people');
         console.log(viewModel);
     },
     onRowClick: function (cmp, record) {
-        console.log('onRowClick');
+        console.log('PersonController: onRowClick');
 
 //        var viewmodel = this.getViewModel();
 
@@ -32,6 +32,7 @@
         TrainingWeb.Globals.setCurrentab(currentTab);
 
         // remove it
+        console.log('PersonController: Remove tab');
         tabs[0].remove(currentTab, false);
         // add a new one - editor
         var newtab = tabs[0].add({
@@ -39,6 +40,7 @@
             items: [
                 {
                     xtype: 'personeditorview',
+                    // Still required for data binding
                     viewModel: {
                         data: {
                             record: record  // pass the record to the Editor View Model
@@ -52,6 +54,7 @@
         //console.log('fireEvent(populateEditor)');
 
         // effectively 'shows' the new tab
+        console.log('PersonController: Show tab');
         tabs[0].setActiveTab(newtab); 
     }
 

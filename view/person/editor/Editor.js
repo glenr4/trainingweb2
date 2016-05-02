@@ -15,16 +15,21 @@
 
     defaultType: 'textfield',
     items: [
-     {
-        fieldLabel: 'First  Name',
-        name: 'firstName',
-         
-            allowBlank: false
+        {
+            fieldLabel: 'First  Name',
+            name: 'firstName',
+            allowBlank: false,
+            bind: {
+                value: '{record.firstName}'
+            }
         },
         {
             fieldLabel: 'Last Name',
             name: 'lastName',
-            allowBlank: false
+            allowBlank: false,
+            bind: {
+                value: '{record.lastName}'
+            }
         }
     ],
     buttons: [
@@ -41,10 +46,12 @@
             }
         }
     ]
-    //,
-    //listeners: {
-    //    change: 'onChange'
-    //}
+    ,
+    listeners: {
+        //        change: 'onChange'
+        afterrender: 'onAfterRender',
+        dirtychange: 'onDirtyChange'
+    }
 
 });
 
